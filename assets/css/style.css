@@ -1038,3 +1038,58 @@ a{color:var(--cyan);text-decoration:none}
   }
 
 }
+
+
+.orbit {
+  width: 220px;
+  height: 300px;
+  margin: 0 auto 1.5rem;
+
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(circle at center,
+    rgba(0,255,200,0.15),
+    transparent 70%);
+
+  border: 1px solid rgba(0,255,200,0.25);
+
+  animation: rotateOrbit 12s linear infinite;
+
+  box-shadow:
+    0 0 20px rgba(0,255,200,0.25),
+    0 0 60px rgba(0,255,200,0.15);
+}
+
+.orbit-logo {
+  width: 350px;
+  height: 250px;
+  object-fit: contain;
+
+  animation: counterRotate 12s linear infinite;
+}
+
+@keyframes rotateOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes counterRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
